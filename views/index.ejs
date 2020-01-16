@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <iframe src="http://47.107.110.37/" id="my-iframe"></iframe>
+    <script type="text/javascript">
+      window.onload=function(){
+        // 使用postMessage跨域，主域名需要一样
+        // window.frames[0].postMessage('苍老师','http://localhost/users');
+        setTimeout(() => {
+          window.frames[0].location.href = 'http://localhost/users';
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
